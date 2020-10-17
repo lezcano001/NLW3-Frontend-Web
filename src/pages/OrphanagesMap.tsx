@@ -10,16 +10,14 @@ import mapIcon from '../utils/mapIcon';
 import api from '../services/api';
 
 interface Orphanage{
-    id: number,
-    latitude: number,
-    longitud: number,
-    name: string
+    id: number;
+    latitude: number;
+    longitud: number;
+    name: string;
 }
 
 function OrphanagesMap() {
     const [orphanages, setOrphanages] = useState<Orphanage[]>([]);
-
-    console.log(orphanages);
 
     useEffect(()=> {
         api.get('orphanages').then(response => {
