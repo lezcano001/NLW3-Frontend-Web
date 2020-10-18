@@ -50,6 +50,8 @@ export default function CreateOrphanage() {
 
     const { latitude, longitud } = position;
 
+    const data = new FormData();
+
     console.log({
       name,
       about,
